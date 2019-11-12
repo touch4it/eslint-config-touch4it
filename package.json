@@ -1,0 +1,51 @@
+{
+  "name": "eslint-config-touch4it",
+  "version": "1.0.0",
+  "description": "ESLint configuration for ES6+ projects",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/touch4it/eslint-config-touch4it.git"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "test": "prettier --check *.js package.json"
+  },
+  "keywords": [
+    "eslintconfig",
+    "xo",
+    "code",
+    "quality",
+    "style",
+    "lint",
+    "linter",
+    "eslint",
+    "validate",
+    "code style",
+    "standard",
+    "es6",
+    "es6+",
+    "touch4it"
+  ],
+  "author": "Touch4IT <hi@touch4it.com> (https://touch4it.com/)",
+  "contributors": [
+    "Viktor Sulak <sulak@touch4it.com>"
+  ],
+  "bugs": {
+    "url": "https://github.com/touch4it/eslint-config-touch4it/issues"
+  },
+  "homepage": "https://github.com/touch4it/eslint-config-touch4it",
+  "license": "ISC",
+  "peerDependencies": {
+    "eslint": ">=6.4.0"
+  },
+  "dependencies": {
+    "eslint-config-xo": "^0.27.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "prettier": "^1.19.1"
+  }
+}

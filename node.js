@@ -33,5 +33,23 @@ module.exports = {
       'error',
       'always'
     ],
+    'node/prefer-global/text-decoder': [
+      'error',
+      'always'
+    ],
+    'node/prefer-global/text-encoder': [
+      'error',
+      'always'
+    ],
+    'node/prefer-global/url-search-params': [
+      'error',
+      'always'
+    ],
+    'node/prefer-global/url': [
+      'error',
+      'always'
+    ],
+    'node/prefer-promises/dns': 'error',
+    'node/prefer-promises/fs': 'error'
   }
 };

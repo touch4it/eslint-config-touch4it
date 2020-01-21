@@ -4,6 +4,8 @@ module.exports = {
   },
   plugins: [
     'ava',
+    'eslint-comments',
+    'import',
     'promise',
     'unicorn'
   ],
@@ -34,7 +36,6 @@ module.exports = {
       'always-multiline'
     ],
     'prefer-template': 'warn',
-    'promise/prefer-await-to-then': 'error',
     'require-atomic-updates': 'warn',
     'spaced-comment': [
       'error',
@@ -46,6 +47,76 @@ module.exports = {
         }
       }
     ],
+
+    // Eslint comments
+    'eslint-comments/disable-enable-pair': [
+      'error',
+      {
+        allowWholeFile: true
+      }
+    ],
+    'eslint-comments/no-aggregating-enable': 'error',
+    'eslint-comments/no-duplicate-disable': 'error',
+    'eslint-comments/no-unused-disable': 'error',
+    'eslint-comments/no-unused-enable': 'error',
+
+    // Import
+    'import/default': 'error',
+    'import/export': 'error',
+    'import/extensions': [
+      'error',
+      {
+        js: 'never',
+        jsx: 'never',
+        json: 'always'
+      }
+    ],
+    'import/namespace': [
+      'error',
+      {
+        allowComputed: true
+      }
+    ],
+    'import/no-absolute-path': 'error',
+    'import/no-webpack-loader-syntax': 'error',
+    'import/no-self-import': 'error',
+    'import/no-useless-path-segments': [
+      'error',
+      {
+        noUselessIndex: true
+      }
+    ],
+    'import/no-amd': 'error',
+    'import/no-duplicates': 'error',
+    'import/no-extraneous-dependencies': 'error',
+    'import/no-mutable-exports': 'error',
+    'import/no-named-as-default-member': 'error',
+    'import/no-named-as-default': 'error',
+    'import/order': 'error',
+    'import/no-unassigned-import': [
+      'error',
+      {
+        allow: [
+          '@babel/polyfill',
+          '@babel/register'
+        ]
+      }
+    ],
+
+    // Promise
+    'promise/prefer-await-to-then': 'error',
+    'promise/param-names': 'error',
+    'promise/no-return-wrap': [
+      'error',
+      {
+        allowReject: true
+      }
+    ],
+    'promise/no-new-statics': 'error',
+    'promise/no-return-in-finally': 'error',
+    'promise/valid-params': 'error',
+
+    // Unicorn
     'unicorn/consistent-function-scoping': 'off',
     'unicorn/expiring-todo-comments': [
       'error',

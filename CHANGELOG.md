@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 3.1.0 (2020-02-10)
+
+-   Updated dependencies
+-   Updated code styling
+
 ## 3.0.0 (2020-01-21)
 
 -   Added eslint comments and import plugins

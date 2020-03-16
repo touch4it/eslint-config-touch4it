@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-touch4it",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "ESLint configuration for ES6+ projects based on XO",
   "main": "index.js",
   "repository": {

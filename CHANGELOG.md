@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.2.1 (2020-03-16)
+
+-   Updated acorn dependency
+
 ## 3.2.0 (2020-03-16)
 
 -   Updated dependencies

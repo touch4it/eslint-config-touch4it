@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 4.0.0 (2020-03-26)
+
+-   Updated `eslint-plugin-unicorn` dependency
+-   Backported settings from `xo`
+-   Added format-package package and script
+
 ## 3.2.1 (2020-03-16)
 
 -   Updated acorn dependency

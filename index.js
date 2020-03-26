@@ -129,6 +129,99 @@ module.exports = {
     'unicorn/no-process-exit': 'error',
     'no-process-exit': 'off',
     'unicorn/prefer-flat-map': 'off',
-    'unicorn/prevent-abbreviations': 'off'
+    'unicorn/prevent-abbreviations': [
+      'error',
+      {
+        checkFilenames: false,
+        checkDefaultAndNamespaceImports: false,
+        checkShorthandImports: false,
+        extendDefaultReplacements: false,
+        replacements: {
+          // Not part of `eslint-plugin-unicorn`
+          application: {
+            app: true
+          },
+          applications: {
+            apps: true
+          },
+
+          // Part of `eslint-plugin-unicorn`
+          arr: {
+            array: true
+          },
+          e: {
+            error: true,
+            event: true
+          },
+          el: {
+            element: true
+          },
+          elem: {
+            element: true
+          },
+          len: {
+            length: true
+          },
+          msg: {
+            message: true
+          },
+          num: {
+            number: true
+          },
+          obj: {
+            object: true
+          },
+          opts: {
+            options: true
+          },
+          param: {
+            parameter: true
+          },
+          params: {
+            parameters: true
+          },
+          prev: {
+            previous: true
+          },
+          req: {
+            request: true
+          },
+          res: {
+            response: true,
+            result: true
+          },
+          ret: {
+            returnValue: true
+          },
+          str: {
+            string: true
+          },
+          temp: {
+            temporary: true
+          },
+          tmp: {
+            temporary: true
+          },
+          val: {
+            value: true
+          }
+        }
+      }
+    ],
+    // The character class sorting is a bit buggy at the moment.
+    'unicorn/better-regex': [
+      'error',
+      {
+        sortCharacterClasses: false
+      }
+    ],
+    'unicorn/string-content': [
+      'error',
+      {
+        patterns: {
+          '\\.\\.\\.': '…'
+        }
+      }
+    ]
   }
 };

@@ -1,18 +1,23 @@
 {
   "name": "eslint-config-touch4it",
-  "version": "3.2.1",
+  "version": "4.0.0",
   "description": "ESLint configuration for ES6+ projects based on XO",
-  "main": "index.js",
+  "license": "ISC",
+  "engines": {
+    "node": ">=10"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/touch4it/eslint-config-touch4it.git"
   },
-  "engines": {
-    "node": ">=10"
+  "bugs": {
+    "url": "https://github.com/touch4it/eslint-config-touch4it/issues"
   },
-  "scripts": {
-    "test": "eslint ."
-  },
+  "homepage": "https://github.com/touch4it/eslint-config-touch4it",
+  "author": "Touch4IT <hi@touch4it.com> (https://touch4it.com/)",
+  "contributors": [
+    "Viktor Sulak <sulak@touch4it.com>"
+  ],
   "keywords": [
     "eslintconfig",
     "xo",
@@ -32,18 +37,14 @@
     "ava",
     "mocha"
   ],
-  "author": "Touch4IT <hi@touch4it.com> (https://touch4it.com/)",
-  "contributors": [
+  "main": "index.js",
+  "scripts": {
+    "format-package": "format-package -w",
+    "test": "eslint ."
+  },
+  "maintainers": [
     "Viktor Sulak <sulak@touch4it.com>"
   ],
-  "bugs": {
-    "url": "https://github.com/touch4it/eslint-config-touch4it/issues"
-  },
-  "homepage": "https://github.com/touch4it/eslint-config-touch4it",
-  "license": "ISC",
-  "peerDependencies": {
-    "eslint": ">=6.4.0"
-  },
   "dependencies": {
     "eslint-config-xo": "^0.29.1",
     "eslint-plugin-ava": "^10.2.0",
@@ -52,9 +53,13 @@
     "eslint-plugin-mocha": "^6.3.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-unicorn": "^17.2.0"
+    "eslint-plugin-unicorn": "^18.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=6.4.0"
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "format-package": "^5.2.0"
   }
 }

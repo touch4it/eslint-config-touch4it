@@ -19,6 +19,8 @@ module.exports = {
     'node/no-missing-import': 'error',
     'node/no-missing-require': 'error',
     'node/no-unpublished-bin': 'error',
+    'node/no-unpublished-import': 'off',
+    'node/no-unpublished-require': 'off',
     'node/process-exit-as-throw': 'error',
     'node/no-deprecated-api': 'error',
     'node/prefer-global/buffer': [

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.0.1 (2020-03-27)
+
+-   Backported settings from `xo`
+
 ## 4.0.0 (2020-03-26)
 
 -   Updated `eslint-plugin-unicorn` dependency

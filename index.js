@@ -222,6 +222,7 @@ module.exports = {
           '\\.\\.\\.': '…'
         }
       }
-    ]
+    ],
+    'unicorn/no-null': 'off',
   }
 };

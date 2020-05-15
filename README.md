@@ -1,5 +1,12 @@
 # eslint-config-touch4it
 
+![npm peer dependency version (scoped)](https://img.shields.io/npm/dependency-version/eslint-config-touch4it/peer/eslint)
+![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg)
+![npm version](https://img.shields.io/npm/v/eslint-config-touch4it)
+![node version](https://img.shields.io/node/v/eslint-config-touch4it)
+![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/eslint-config-touch4it)
+![last commit](https://img.shields.io/github/last-commit/touch4it/eslint-config-touch4it)
+
 > ESLint [shareable config](https://eslint.org/docs/developer-guide/shareable-configs.html) based on for [XO](https://github.com/xojs/eslint-config-xo)
 
 ## Install

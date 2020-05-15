@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 5.0.0 (2020-05-15)
+
+-   Backported settings from `xo`
+-   Updated dependencies
+
 ## 4.0.1 (2020-03-27)
 
 -   Backported settings from `xo`

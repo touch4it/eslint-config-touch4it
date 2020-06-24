@@ -14,6 +14,7 @@ module.exports = {
     node: true
   },
   rules: {
+    // Node
     'node/no-extraneous-import': 'error',
     'node/no-extraneous-require': 'error',
     'node/no-missing-import': 'error',
@@ -52,6 +53,15 @@ module.exports = {
       'always'
     ],
     'node/prefer-promises/dns': 'error',
-    'node/prefer-promises/fs': 'error'
+    'node/prefer-promises/fs': 'error',
+    'node/no-mixed-requires': [
+      'error',
+      {
+        grouping: true,
+        allowCall: true
+      }
+    ],
+    'node/no-new-require': 'error',
+    'node/no-path-concat': 'error',
   }
 };

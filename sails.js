@@ -7,14 +7,5 @@ module.exports = {
   },
   rules: {
     'no-console': 'error',
-    'unicorn/prevent-abbreviations': [
-      'error',
-      {
-        'whitelist': {
-          'req': true,
-          'res': true
-        }
-      }
-    ],
   }
 };

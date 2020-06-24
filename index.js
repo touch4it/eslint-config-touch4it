@@ -102,6 +102,8 @@ module.exports = {
         ]
       }
     ],
+    'import/no-anonymous-default-export': 'error',
+    'import/no-named-default': 'error',
 
     // Promise
     'promise/prefer-await-to-then': 'error',
@@ -205,6 +207,10 @@ module.exports = {
           val: {
             value: true
           }
+        },
+        whitelist: {
+          req: true,
+          res: true
         }
       }
     ],
@@ -224,5 +230,6 @@ module.exports = {
       }
     ],
     'unicorn/no-null': 'off',
+    'unicorn/no-useless-undefined': 'off',
   }
 };

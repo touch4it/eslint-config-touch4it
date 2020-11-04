@@ -40,7 +40,7 @@
   "main": "index.js",
   "scripts": {
     "format-package": "format-package -w",
-    "test": "eslint ."
+    "test": "npx eslint ."
   },
   "maintainers": [
     "Viktor Sulak <sulak@touch4it.com>"

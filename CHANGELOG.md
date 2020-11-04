@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 6.2.0 (2020-11-04)
+
+-   Updated dependencies
+
 ## 6.1.0 (2020-07-18)
 
 -   Updated dependencies

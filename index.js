@@ -31,10 +31,6 @@ module.exports = {
       }
     ],
     'no-inline-comments': 'warn',
-    'multiline-ternary': [
-      'error',
-      'always-multiline'
-    ],
     'prefer-template': 'warn',
     'require-atomic-updates': 'warn',
     'spaced-comment': [
@@ -65,10 +61,14 @@ module.exports = {
     'import/export': 'error',
     'import/extensions': [
       'error',
+      'always',
       {
-        js: 'never',
-        jsx: 'never',
-        json: 'always'
+        ignorePackages: true,
+        // TypeScript doesn't yet support using extensions and fails with error TS2691.
+        pattern: {
+          ts: 'never',
+          tsx: 'never'
+        }
       }
     ],
     'import/namespace': [
@@ -78,14 +78,9 @@ module.exports = {
       }
     ],
     'import/no-absolute-path': 'error',
-    'import/no-webpack-loader-syntax': 'error',
     'import/no-self-import': 'error',
-    'import/no-useless-path-segments': [
-      'error',
-      {
-        noUselessIndex: true
-      }
-    ],
+    'import/no-useless-path-segments': 'error',
+    'import/no-webpack-loader-syntax': 'error',
     'import/no-amd': 'error',
     'import/no-duplicates': 'error',
     'import/no-extraneous-dependencies': 'error',
@@ -98,7 +93,14 @@ module.exports = {
       {
         allow: [
           '@babel/polyfill',
-          '@babel/register'
+          '**/register',
+          '**/register.*',
+          '**/register/**',
+          '**/register/**.*',
+          '**/*.css',
+          '**/*.scss',
+          '**/*.sass',
+          '**/*.less'
         ]
       }
     ],
@@ -151,6 +153,9 @@ module.exports = {
           arr: {
             array: true
           },
+          blacklist: {
+            denyList: true
+          },
           e: {
             error: true,
             event: true
@@ -161,8 +166,14 @@ module.exports = {
           elem: {
             element: true
           },
+          err: {
+            error: true
+          },
           len: {
             length: true
+          },
+          master: {
+            main: true
           },
           msg: {
             message: true
@@ -195,6 +206,9 @@ module.exports = {
           ret: {
             returnValue: true
           },
+          slave: {
+            secondary: true
+          },
           str: {
             string: true
           },
@@ -206,6 +220,9 @@ module.exports = {
           },
           val: {
             value: true
+          },
+          whitelist: {
+            allowList: true
           }
         },
         whitelist: {
@@ -221,6 +238,7 @@ module.exports = {
         sortCharacterClasses: false
       }
     ],
+    'unicorn/consistent-destructuring': 'off',
     'unicorn/string-content': [
       'error',
       {
@@ -231,5 +249,9 @@ module.exports = {
     ],
     'unicorn/no-null': 'off',
     'unicorn/no-useless-undefined': 'off',
+    'unicorn/prefer-ternary': [
+      'error',
+      'only-single-line'
+    ],
   }
 };

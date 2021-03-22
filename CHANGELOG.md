@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 7.0.0 (2021-03-22)
+
+-   Backported settings from `xo`
+-   Updated dependencies
+
 ## 6.2.0 (2020-11-04)
 
 -   Updated dependencies

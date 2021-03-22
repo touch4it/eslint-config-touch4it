@@ -15,6 +15,15 @@ module.exports = {
   },
   rules: {
     // Node
+    'node/file-extension-in-import': [
+      'error',
+      'always',
+      {
+        // TypeScript doesn't yet support using extensions and fails with error TS2691.
+        '.ts': 'never',
+        '.tsx': 'never'
+      }
+    ],
     'node/no-extraneous-import': 'error',
     'node/no-extraneous-require': 'error',
     'node/no-missing-import': 'error',

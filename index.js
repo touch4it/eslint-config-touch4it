@@ -224,7 +224,7 @@ module.exports = {
             allowList: true
           }
         },
-        whitelist: {
+        allowList: {
           req: true,
           res: true
         }

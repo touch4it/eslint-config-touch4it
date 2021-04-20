@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 8.0.1 (2021-04-20)
+
+-   Fixed unicorn/prevent-abbreviations settings
+
 ## 8.0.0 (2021-04-20)
 
 -   Updated dependencies

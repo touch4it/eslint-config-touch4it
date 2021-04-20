@@ -12,8 +12,7 @@ module.exports = {
   extends: [
     'plugin:ava/recommended',
     'plugin:unicorn/recommended',
-    'xo',
-    'xo/esnext'
+    'xo'
   ],
   rules: {
     camelcase: 'error',

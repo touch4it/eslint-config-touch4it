@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 8.0.0 (2021-04-20)
+
+-   Updated dependencies
+-   Removed extension of deprecated xo/esnext
+
 ## 7.1.0 (2021-04-06)
 
 -   Updated dependencies

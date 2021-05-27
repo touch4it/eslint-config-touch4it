@@ -70,6 +70,7 @@ module.exports = {
         }
       }
     ],
+    'import/first': 'error',
     'import/namespace': [
       'error',
       {
@@ -78,6 +79,12 @@ module.exports = {
     ],
     'import/no-absolute-path': 'error',
     'import/no-self-import': 'error',
+    'import/no-cycle': [
+			'error',
+			{
+				ignoreExternal: true
+			}
+		],
     'import/no-useless-path-segments': 'error',
     'import/no-webpack-loader-syntax': 'error',
     'import/no-amd': 'error',
@@ -132,6 +139,7 @@ module.exports = {
     'unicorn/no-process-exit': 'error',
     'no-process-exit': 'off',
     'unicorn/prefer-flat-map': 'off',
+    'unicorn/prefer-module': 'off',
     'unicorn/prevent-abbreviations': [
       'error',
       {

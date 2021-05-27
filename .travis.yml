@@ -1,7 +1,9 @@
 language: node_js
 
 node_js:
+  - '16'
   - '14'
+  - '12'
 
 before_install:
   - "npm install eslint@7"

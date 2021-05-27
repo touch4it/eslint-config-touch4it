@@ -80,11 +80,11 @@ module.exports = {
     'import/no-absolute-path': 'error',
     'import/no-self-import': 'error',
     'import/no-cycle': [
-			'error',
-			{
-				ignoreExternal: true
-			}
-		],
+      'error',
+      {
+        ignoreExternal: true
+      }
+    ],
     'import/no-useless-path-segments': 'error',
     'import/no-webpack-loader-syntax': 'error',
     'import/no-amd': 'error',

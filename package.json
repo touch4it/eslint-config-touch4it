@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-touch4it",
-  "version": "9.0.0",
+  "version": "10.0.0",
   "description": "ESLint configuration for ES6+ projects based on XO",
   "license": "ISC",
   "engines": {

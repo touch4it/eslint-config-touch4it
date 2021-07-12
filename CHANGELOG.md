@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 9.1.0 (2021-07-12)
+## 10.0.0 (2021-07-12)
 
 -   Updated dependencies
 

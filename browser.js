@@ -5,5 +5,8 @@ module.exports = {
   env: {
     node: false,
     browser: true
+  },
+  rules: {
+    'unicorn/prefer-module': 'off',
   }
 };

@@ -77,6 +77,7 @@ module.exports = {
         allowComputed: true
       }
     ],
+    'import/newline-after-import': 'error',
     'import/no-absolute-path': 'error',
     'import/no-self-import': 'error',
     'import/no-cycle': [
@@ -139,7 +140,6 @@ module.exports = {
     'unicorn/no-process-exit': 'error',
     'no-process-exit': 'off',
     'unicorn/prefer-flat-map': 'off',
-    'unicorn/prefer-module': 'off',
     'unicorn/prevent-abbreviations': [
       'error',
       {

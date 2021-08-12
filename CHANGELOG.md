@@ -1,8 +1,15 @@
 # CHANGELOG
 
+## 11.0.0 (2021-08-12)
+
+-   ESM modules allowed by default
+-   Updated dependencies
+-   Compatibility towards xo@0.44.0
+
 ## 10.0.0 (2021-07-12)
 
 -   Updated dependencies
+-   Compatibility towards xo@0.41.0
 
 ## 9.0.0 (2021-05-27)
 

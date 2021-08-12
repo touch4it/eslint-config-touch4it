@@ -35,7 +35,7 @@ module.exports = {
     'node/no-deprecated-api': 'error',
     'node/prefer-global/buffer': [
       'error',
-      'always'
+      'never'
     ],
     'node/prefer-global/console': [
       'error',
@@ -43,7 +43,7 @@ module.exports = {
     ],
     'node/prefer-global/process': [
       'error',
-      'always'
+      'never'
     ],
     'node/prefer-global/text-decoder': [
       'error',
@@ -72,5 +72,13 @@ module.exports = {
     ],
     'node/no-new-require': 'error',
     'node/no-path-concat': 'error',
+    'node/no-unsupported-features/es-syntax': [
+      'error',
+      {
+        ignores: [
+          'modules'
+        ]
+      },
+    ],
   }
 };

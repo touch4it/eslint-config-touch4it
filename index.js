@@ -63,18 +63,14 @@ module.exports = {
       'always',
       {
         ignorePackages: true,
-        // TypeScript doesn't yet support using extensions and fails with error TS2691.
-        pattern: {
-          ts: 'never',
-          tsx: 'never'
-        }
       }
     ],
     'import/first': 'error',
+    'import/named': 'error',
     'import/namespace': [
       'error',
       {
-        allowComputed: true
+        allowComputed: true,
       }
     ],
     'import/newline-after-import': 'error',
@@ -83,7 +79,7 @@ module.exports = {
     'import/no-cycle': [
       'error',
       {
-        ignoreExternal: true
+        ignoreExternal: true,
       }
     ],
     'import/no-useless-path-segments': 'error',
@@ -115,17 +111,17 @@ module.exports = {
     'import/no-named-default': 'error',
 
     // Promise
-    'promise/prefer-await-to-then': 'error',
-    'promise/param-names': 'error',
-    'promise/no-return-wrap': [
-      'error',
-      {
-        allowReject: true
-      }
-    ],
-    'promise/no-new-statics': 'error',
-    'promise/no-return-in-finally': 'error',
-    'promise/valid-params': 'error',
+    // 'promise/prefer-await-to-then': 'error',
+    // 'promise/param-names': 'error',
+    // 'promise/no-return-wrap': [
+    //   'error',
+    //   {
+    //     allowReject: true
+    //   }
+    // ],
+    // 'promise/no-new-statics': 'error',
+    // 'promise/no-return-in-finally': 'error',
+    // 'promise/valid-params': 'error',
 
     // Unicorn
     'unicorn/consistent-function-scoping': 'off',
@@ -161,7 +157,7 @@ module.exports = {
             array: true
           },
           blacklist: {
-            denyList: true
+            exclude: true
           },
           e: {
             error: true,
@@ -229,7 +225,7 @@ module.exports = {
             value: true
           },
           whitelist: {
-            allowList: true
+            include: true
           }
         },
         allowList: {

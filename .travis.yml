@@ -6,4 +6,4 @@ node_js:
   - '12'
 
 before_install:
-  - "npm install eslint@7"
+  - "npm install eslint@8"

@@ -11,7 +11,7 @@ module.exports = {
   env: {
     es6: true,
     mocha: true,
-    node: true
+    node: true,
   },
   rules: {
     // Node
@@ -67,18 +67,11 @@ module.exports = {
       'error',
       {
         grouping: true,
-        allowCall: true
+        allowCall: true,
       }
     ],
     'node/no-new-require': 'error',
     'node/no-path-concat': 'error',
-    'node/no-unsupported-features/es-syntax': [
-      'error',
-      {
-        ignores: [
-          'modules'
-        ]
-      },
-    ],
+    'node/no-unsupported-features/es-syntax': 'off',
   }
 };

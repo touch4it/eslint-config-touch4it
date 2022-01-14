@@ -7,5 +7,6 @@ module.exports = {
   },
   rules: {
     'no-console': 'error',
+    'unicorn/prefer-module': 'off'
   }
 };

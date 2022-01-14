@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 13.1.0 (2022-01-14)
+
+- Removed ESM rule from `sails` option
+
 ## 13.0.0 (2021-12-27)
 
 - Updated ESlint 8 peer dependency

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 14.0.0 (2022-04-07)
+
+- Updated dependencies
+- Compatibility towards xo@0.48.0
+
 ## 13.1.0 (2022-01-14)
 
 - Removed ESM rule from `sails` option

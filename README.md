@@ -11,8 +11,8 @@
 
 ## Install
 
-```
-$ npm install --save-dev eslint-config-touch4it
+```bash
+npm install --save-dev eslint-config-touch4it
 ```
 
 
@@ -22,10 +22,10 @@ Add some ESLint config to your `package.json`:
 
 ```json
 {
-	"name": "my-awesome-project",
-	"eslintConfig": {
-		"extends": "touch4it"
-	}
+ "name": "my-awesome-project",
+ "eslintConfig": {
+  "extends": "touch4it"
+ }
 }
 ```
 
@@ -33,7 +33,7 @@ Or to `.eslintrc`:
 
 ```json
 {
-	"extends": "touch4it"
+ "extends": "touch4it"
 }
 ```
 
@@ -43,7 +43,7 @@ This package also exposes [`touch4it/node`](node.js) for general Node.js project
 
 ```json
 {
-	"extends": "touch4it/node"
+ "extends": "touch4it/node"
 }
 ```
 
@@ -51,7 +51,7 @@ This package also exposes [`touch4it/node`](node.js) for general Node.js project
 
 ```json
 {
-	"extends": "touch4it/sails"
+ "extends": "touch4it/sails"
 }
 ```
 
@@ -59,7 +59,7 @@ And [`touch4it/browser`](browser.js) for browser:
 
 ```json
 {
-	"extends": "touch4it/browser"
+ "extends": "touch4it/browser"
 }
 ```
 

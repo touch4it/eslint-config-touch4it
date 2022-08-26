@@ -5,17 +5,17 @@ module.exports = {
   ],
   extends: [
     'plugin:mocha/recommended',
-    'plugin:node/recommended',
+    'plugin:n/recommended',
     'touch4it'
   ],
   env: {
-    es6: true,
+    es2019: true,
     mocha: true,
     node: true,
   },
   rules: {
     // Node
-    'node/file-extension-in-import': [
+    'n/file-extension-in-import': [
       'error',
       'always',
       {
@@ -24,54 +24,54 @@ module.exports = {
         '.tsx': 'never'
       }
     ],
-    'node/no-extraneous-import': 'error',
-    'node/no-extraneous-require': 'error',
-    'node/no-missing-import': 'error',
-    'node/no-missing-require': 'error',
-    'node/no-unpublished-bin': 'error',
-    'node/no-unpublished-import': 'off',
-    'node/no-unpublished-require': 'off',
-    'node/process-exit-as-throw': 'error',
-    'node/no-deprecated-api': 'error',
-    'node/prefer-global/buffer': [
+    'n/no-extraneous-import': 'error',
+    'n/no-extraneous-require': 'error',
+    'n/no-missing-import': 'error',
+    'n/no-missing-require': 'error',
+    'n/no-unpublished-bin': 'error',
+    'n/no-unpublished-import': 'off',
+    'n/no-unpublished-require': 'off',
+    'n/process-exit-as-throw': 'error',
+    'n/no-deprecated-api': 'error',
+    'n/prefer-global/buffer': [
       'error',
       'never'
     ],
-    'node/prefer-global/console': [
+    'n/prefer-global/console': [
       'error',
       'always'
     ],
-    'node/prefer-global/process': [
+    'n/prefer-global/process': [
       'error',
       'never'
     ],
-    'node/prefer-global/text-decoder': [
+    'n/prefer-global/text-decoder': [
       'error',
       'always'
     ],
-    'node/prefer-global/text-encoder': [
+    'n/prefer-global/text-encoder': [
       'error',
       'always'
     ],
-    'node/prefer-global/url-search-params': [
+    'n/prefer-global/url-search-params': [
       'error',
       'always'
     ],
-    'node/prefer-global/url': [
+    'n/prefer-global/url': [
       'error',
       'always'
     ],
-    'node/prefer-promises/dns': 'error',
-    'node/prefer-promises/fs': 'error',
-    'node/no-mixed-requires': [
+    'n/prefer-promises/dns': 'error',
+    'n/prefer-promises/fs': 'error',
+    'n/no-mixed-requires': [
       'error',
       {
         grouping: true,
         allowCall: true,
       }
     ],
-    'node/no-new-require': 'error',
-    'node/no-path-concat': 'error',
-    'node/no-unsupported-features/es-syntax': 'off',
+    'n/no-new-require': 'error',
+    'n/no-path-concat': 'error',
+    'n/no-unsupported-features/es-syntax': 'off',
   }
 };

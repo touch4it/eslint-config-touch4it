@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 15.0.0 (2022-08-26)
+
+- Updated dependencies
+- Compatibility towards xo@0.52.2
+- Switched `eslint-plugin-node` for `eslint-plugin-n`
+
 ## 14.0.0 (2022-04-07)
 
 - Updated dependencies

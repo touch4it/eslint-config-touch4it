@@ -15,7 +15,6 @@
 npm install --save-dev eslint-config-touch4it
 ```
 
-
 ## Usage
 
 Add some ESLint config to your `package.json`:
@@ -65,4 +64,4 @@ And [`touch4it/browser`](browser.js) for browser:
 
 ## License
 
-ISC © [Touch4IT](https://www.touch4it.com)
+[ISC](https://opensource.org/licenses/ISC) © [Touch4IT](https://www.touch4it.com)

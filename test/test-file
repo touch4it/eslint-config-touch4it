@@ -1,0 +1,34 @@
+const fs = require('fs');
+const {foo} = require('bar');
+
+const name = "square";
+
+/**
+ *
+ * @param len Length
+ * @param {number} x Test value 1
+ * @param {some_number} y Test value 2
+ * @returns Square
+ */
+function test1(len, x, y, color) {
+  const square = {
+    color,
+    positionX: x,
+      position_y: y,
+    foo
+  };
+
+  square.sideLength = len
+
+  return square;
+}
+
+function test2 () {
+  process.exit(1);
+}
+
+module.exports = {
+  name,
+  test1,
+  test2,
+};

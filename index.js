@@ -1,18 +1,18 @@
 module.exports = {
   env: {
-    es6: true
+    es2019: true,
   },
   plugins: [
     'ava',
     'eslint-comments',
     'import',
     'promise',
-    'unicorn'
+    'unicorn',
   ],
   extends: [
     'plugin:ava/recommended',
     'plugin:unicorn/recommended',
-    'xo'
+    'xo',
   ],
   rules: {
     camelcase: 'error',
@@ -20,14 +20,14 @@ module.exports = {
       'error',
       2,
       {
-        SwitchCase: 1
-      }
+        SwitchCase: 1,
+      },
     ],
     'no-multi-spaces': [
       'error',
       {
-        ignoreEOLComments: true
-      }
+        ignoreEOLComments: true,
+      },
     ],
     'no-inline-comments': 'warn',
     'prefer-template': 'warn',
@@ -38,17 +38,17 @@ module.exports = {
       {
         block: {
           exceptions: ['*'],
-          markers: ['!']
-        }
-      }
+          markers: ['!'],
+        },
+      },
     ],
 
     // Eslint comments
     'eslint-comments/disable-enable-pair': [
       'error',
       {
-        allowWholeFile: true
-      }
+        allowWholeFile: true,
+      },
     ],
     'eslint-comments/no-aggregating-enable': 'error',
     'eslint-comments/no-duplicate-disable': 'error',
@@ -63,7 +63,7 @@ module.exports = {
       'always',
       {
         ignorePackages: true,
-      }
+      },
     ],
     'import/first': 'error',
     'import/named': 'error',
@@ -71,7 +71,7 @@ module.exports = {
       'error',
       {
         allowComputed: true,
-      }
+      },
     ],
     'import/newline-after-import': 'error',
     'import/no-absolute-path': 'error',
@@ -80,7 +80,7 @@ module.exports = {
       'error',
       {
         ignoreExternal: true,
-      }
+      },
     ],
     'import/no-useless-path-segments': 'error',
     'import/no-webpack-loader-syntax': 'error',
@@ -103,9 +103,9 @@ module.exports = {
           '**/*.css',
           '**/*.scss',
           '**/*.sass',
-          '**/*.less'
-        ]
-      }
+          '**/*.less',
+        ],
+      },
     ],
     'import/no-anonymous-default-export': 'error',
     'import/no-named-default': 'error',
@@ -128,8 +128,8 @@ module.exports = {
     'unicorn/expiring-todo-comments': [
       'error',
       {
-        allowWarningComments: true
-      }
+        allowWarningComments: true,
+      },
     ],
     'unicorn/explicit-length-check': 'off',
     'unicorn/filename-case': 'off',
@@ -146,115 +146,115 @@ module.exports = {
         replacements: {
           // Not part of `eslint-plugin-unicorn`
           application: {
-            app: true
+            app: true,
           },
           applications: {
-            apps: true
+            apps: true,
           },
 
           // Part of `eslint-plugin-unicorn`
           arr: {
-            array: true
+            array: true,
           },
           blacklist: {
-            exclude: true
+            exclude: true,
           },
           e: {
             error: true,
-            event: true
+            event: true,
           },
           el: {
-            element: true
+            element: true,
           },
           elem: {
-            element: true
+            element: true,
           },
           err: {
-            error: true
+            error: true,
           },
           len: {
-            length: true
+            length: true,
           },
           master: {
-            main: true
+            main: true,
           },
           msg: {
-            message: true
+            message: true,
           },
           num: {
-            number: true
+            number: true,
           },
           obj: {
-            object: true
+            object: true,
           },
           opts: {
-            options: true
+            options: true,
           },
           param: {
-            parameter: true
+            parameter: true,
           },
           params: {
-            parameters: true
+            parameters: true,
           },
           prev: {
-            previous: true
+            previous: true,
           },
           req: {
-            request: true
+            request: true,
           },
           res: {
             response: true,
-            result: true
+            result: true,
           },
           ret: {
-            returnValue: true
+            returnValue: true,
           },
           slave: {
-            secondary: true
+            secondary: true,
           },
           str: {
-            string: true
+            string: true,
           },
           temp: {
-            temporary: true
+            temporary: true,
           },
           tmp: {
-            temporary: true
+            temporary: true,
           },
           val: {
-            value: true
+            value: true,
           },
           whitelist: {
-            include: true
-          }
+            include: true,
+          },
         },
         allowList: {
           req: true,
-          res: true
-        }
-      }
+          res: true,
+        },
+      },
     ],
     // The character class sorting is a bit buggy at the moment.
     'unicorn/better-regex': [
       'error',
       {
-        sortCharacterClasses: false
-      }
+        sortCharacterClasses: false,
+      },
     ],
     'unicorn/consistent-destructuring': 'off',
     'unicorn/string-content': [
       'error',
       {
         patterns: {
-          '\\.\\.\\.': '…'
-        }
-      }
+          '\\.\\.\\.': '…',
+        },
+      },
     ],
     'unicorn/no-null': 'off',
     'unicorn/no-useless-undefined': 'off',
     'unicorn/prefer-ternary': [
       'error',
-      'only-single-line'
+      'only-single-line',
     ],
-  }
+  },
 };

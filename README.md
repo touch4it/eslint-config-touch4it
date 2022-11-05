@@ -17,14 +17,16 @@ npm install --save-dev eslint-config-touch4it
 
 ## Usage
 
+Built for ES2019+
+
 Add some ESLint config to your `package.json`:
 
 ```json
 {
- "name": "my-awesome-project",
- "eslintConfig": {
-  "extends": "touch4it"
- }
+  "name": "my-awesome-project",
+  "eslintConfig": {
+    "extends": "touch4it"
+  }
 }
 ```
 
@@ -32,17 +34,37 @@ Or to `.eslintrc`:
 
 ```json
 {
- "extends": "touch4it"
+  "extends": "touch4it"
 }
 ```
 
-Built for ES6+
-
-This package also exposes [`touch4it/node`](node.js) for general Node.js projects:
+[`touch4it/node`](node.js) for [Node.js](https://nodejs.org/) projects:
 
 ```json
 {
- "extends": "touch4it/node"
+  "extends": "touch4it/node"
+}
+```
+
+[`touch4it/mocha`](mocha.js) for [Mocha](https://mochajs.org/)-tested projects:
+
+```json
+{
+  "extends": [
+    "touch4it/node",
+    "touch4it/mocha"
+  ]
+}
+```
+
+[`touch4it/jsdoc`](jsdoc.js) for [JSDoc](https://www.npmjs.com/package/jsdoc)-documented projects:
+
+```json
+{
+  "extends": [
+    "touch4it/node",
+    "touch4it/jsdoc"
+  ]
 }
 ```
 
@@ -50,7 +72,18 @@ This package also exposes [`touch4it/node`](node.js) for general Node.js project
 
 ```json
 {
- "extends": "touch4it/sails"
+  "extends": "touch4it/sails"
+}
+```
+
+Default Node configuration is written for ESM, however you can still use [`touch4it/commonjs`](commonjs.js) for CommonJS projects:
+
+```json
+{
+  "extends": [
+    "touch4it/node",
+    "touch4it/commonjs"
+  ]
 }
 ```
 
@@ -58,7 +91,7 @@ And [`touch4it/browser`](browser.js) for browser:
 
 ```json
 {
- "extends": "touch4it/browser"
+  "extends": "touch4it/browser"
 }
 ```
 

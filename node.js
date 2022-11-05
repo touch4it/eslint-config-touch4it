@@ -1,16 +1,13 @@
 module.exports = {
   plugins: [
-    'mocha',
-    'node'
+    'node',
   ],
   extends: [
-    'plugin:mocha/recommended',
     'plugin:n/recommended',
-    'touch4it'
+    'touch4it',
   ],
   env: {
     es2019: true,
-    mocha: true,
     node: true,
   },
   rules: {
@@ -21,8 +18,8 @@ module.exports = {
       {
         // TypeScript doesn't yet support using extensions and fails with error TS2691.
         '.ts': 'never',
-        '.tsx': 'never'
-      }
+        '.tsx': 'never',
+      },
     ],
     'n/no-extraneous-import': 'error',
     'n/no-extraneous-require': 'error',
@@ -35,31 +32,31 @@ module.exports = {
     'n/no-deprecated-api': 'error',
     'n/prefer-global/buffer': [
       'error',
-      'never'
+      'never',
     ],
     'n/prefer-global/console': [
       'error',
-      'always'
+      'always',
     ],
     'n/prefer-global/process': [
       'error',
-      'never'
+      'never',
     ],
     'n/prefer-global/text-decoder': [
       'error',
-      'always'
+      'always',
     ],
     'n/prefer-global/text-encoder': [
       'error',
-      'always'
+      'always',
     ],
     'n/prefer-global/url-search-params': [
       'error',
-      'always'
+      'always',
     ],
     'n/prefer-global/url': [
       'error',
-      'always'
+      'always',
     ],
     'n/prefer-promises/dns': 'error',
     'n/prefer-promises/fs': 'error',
@@ -68,10 +65,10 @@ module.exports = {
       {
         grouping: true,
         allowCall: true,
-      }
+      },
     ],
     'n/no-new-require': 'error',
     'n/no-path-concat': 'error',
     'n/no-unsupported-features/es-syntax': 'off',
-  }
+  },
 };

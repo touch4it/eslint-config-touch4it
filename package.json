@@ -1,10 +1,10 @@
 {
   "name": "eslint-config-touch4it",
-  "version": "15.0.0",
+  "version": "16.0.0",
   "description": "ESLint configuration for ES6+ projects based on XO",
   "license": "ISC",
   "engines": {
-    "node": ">=12"
+    "node": ">= 12"
   },
   "repository": {
     "type": "git",
@@ -32,15 +32,24 @@
     "standard",
     "es6",
     "es6+",
+    "esm",
+    "commonjs",
     "touch4it",
     "unicorn",
     "ava",
-    "mocha"
+    "mocha",
+    "jsdoc"
   ],
+  "type": "commonjs",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
+    "eslint": "eslint --no-error-on-unmatched-pattern test/*.js *.js",
     "format-package": "npx format-package -w",
-    "test": "npx eslint@8"
+    "mocha": "mocha test/*.test.js --exit",
+    "test": "npm run eslint && npm run mocha"
   },
   "maintainers": [
     "Viktor Sulak <sulak@touch4it.com>"
@@ -50,13 +59,18 @@
     "eslint-plugin-ava": "^13.2.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.6.2",
     "eslint-plugin-mocha": "^10.1.0",
     "eslint-plugin-n": "^15.2.5",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.1",
-    "eslint-plugin-unicorn": "^43.0.2"
+    "eslint-plugin-unicorn": "^44.0.2"
   },
   "peerDependencies": {
     "eslint": ">=8 <9"
+  },
+  "devDependencies": {
+    "eslint": "^8.26.0",
+    "mocha": "^10.1.0"
   }
 }

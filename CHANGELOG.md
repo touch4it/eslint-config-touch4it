@@ -1,15 +1,24 @@
 # CHANGELOG
 
+## 16.0.0 (2022-11-05)
+
+- Added `commonjs` rule set with
+- Added `jsdoc` rule set with
+- Added some tests
+- Split `node` rule set into `node` and `mocha`
+- Updated dependencies
+- Updated target compatibility towards `ES2019`
+
 ## 15.0.0 (2022-08-26)
 
 - Updated dependencies
-- Compatibility towards xo@0.52.2
+- Compatibility towards `xo@0.52.2`
 - Switched `eslint-plugin-node` for `eslint-plugin-n`
 
 ## 14.0.0 (2022-04-07)
 
 - Updated dependencies
-- Compatibility towards xo@0.48.0
+- Compatibility towards `xo@0.48.0`
 
 ## 13.1.0 (2022-01-14)
 
@@ -22,18 +31,18 @@
 ## 12.0.0 (2021-12-10)
 
 - Updated dependencies
-- Compatibility towards xo@0.47.0
+- Compatibility towards `xo@0.47.0`
 
 ## 11.0.0 (2021-08-12)
 
 - ESM modules allowed by default
 - Updated dependencies
-- Compatibility towards xo@0.44.0
+- Compatibility towards `xo@0.44.0`
 
 ## 10.0.0 (2021-07-12)
 
 - Updated dependencies
-- Compatibility towards xo@0.41.0
+- Compatibility towards `xo@0.41.0`
 
 ## 9.0.0 (2021-05-27)
 

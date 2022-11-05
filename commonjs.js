@@ -3,8 +3,7 @@ module.exports = {
     'touch4it',
   ],
   env: {
-    node: false,
-    browser: true,
+    commonjs: true,
   },
   rules: {
     'unicorn/prefer-module': 'off',

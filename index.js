@@ -229,8 +229,11 @@ module.exports = {
           },
         },
         allowList: {
+          app: true,
           req: true,
           res: true,
+          param: true,
+          params: true,
         },
       },
     ],

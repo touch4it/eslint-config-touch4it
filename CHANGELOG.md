@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 16.2.0 (2022-11-07)
+
+- Added `app`, `param`, and `params` as allowed abbreviations
+
 ## 16.1.0 (2022-11-07)
 
 - Updated target compatibility of browser back towards `ES6`

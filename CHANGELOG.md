@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 16.1.0 (2022-11-07)
+
+- Updated target compatibility of browser back towards `ES6`
+
 ## 16.0.0 (2022-11-05)
 
 - Added `commonjs` rule set with

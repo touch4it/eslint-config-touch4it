@@ -1,12 +1,11 @@
 module.exports = {
   extends: [
-    'touch4it',
+    'touch4it/commonjs',
   ],
   env: {
+    es6: true,
+    es2019: false,
     node: false,
     browser: true,
-  },
-  rules: {
-    'unicorn/prefer-module': 'off',
   },
 };

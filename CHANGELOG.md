@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 17.0.0 (2023-01-09)
+
+- Updated dependencies
+- Compatibility towards `xo@0.53.1`
+
 ## 16.2.0 (2022-11-07)
 
 - Added `app`, `param`, and `params` as allowed abbreviations

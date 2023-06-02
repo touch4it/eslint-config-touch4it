@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 17.0.0 (2023-06-02)
+## 18.0.0 (2023-06-02)
 
 - Updated dependencies
 - Compatibility towards `xo@0.54.2`

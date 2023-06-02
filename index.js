@@ -1,3 +1,4 @@
+// https://github.com/xojs/xo/blob/main/config/plugins.cjs
 module.exports = {
   env: {
     es2019: true,
@@ -73,7 +74,13 @@ module.exports = {
         allowComputed: true,
       },
     ],
-    'import/newline-after-import': 'error',
+    'import/newline-after-import': [
+      'error',
+      {
+        // TODO: Buggy.
+        // considerComments: true,
+      },
+    ],
     'import/no-absolute-path': 'error',
     'import/no-self-import': 'error',
     'import/no-cycle': [
@@ -85,12 +92,36 @@ module.exports = {
     'import/no-useless-path-segments': 'error',
     'import/no-webpack-loader-syntax': 'error',
     'import/no-amd': 'error',
-    'import/no-duplicates': 'error',
-    'import/no-extraneous-dependencies': 'error',
+    'import/no-duplicates': [
+      'error',
+      {
+        'prefer-inline': true,
+      },
+    ],
+    'import/no-empty-named-blocks': 'error',
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        includeTypes: true,
+      },
+    ],
     'import/no-mutable-exports': 'error',
     'import/no-named-as-default-member': 'error',
     'import/no-named-as-default': 'error',
-    'import/order': 'error',
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'parent',
+          'sibling',
+          'index',
+        ],
+        'newlines-between': 'never',
+        warnOnUnassignedImports: true,
+      },
+    ],
     'import/no-unassigned-import': [
       'error',
       {

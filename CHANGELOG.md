@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 18.1.0 (2023-06-12)
+
+- Updated `import/order` rule with `newlines-between` set to default
+
 ## 18.0.0 (2023-06-02)
 
 - Updated dependencies

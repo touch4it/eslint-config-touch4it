@@ -118,7 +118,7 @@ module.exports = {
           'sibling',
           'index',
         ],
-        'newlines-between': 'never',
+        // 'newlines-between': 'never',
         warnOnUnassignedImports: true,
       },
     ],

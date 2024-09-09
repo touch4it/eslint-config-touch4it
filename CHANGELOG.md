@@ -1,6 +1,15 @@
 # CHANGELOG
 
-## 18.2.0 (2023-07-09)
+## 19.0.0 (2024-09-09)
+
+- Migrated to flat config
+- Minimal engine requirement changed to Node 18
+- Updated dependencies
+- Compatibility towards `xo@0.59.3`
+- Rewritten to ESM
+
+## 18.2.0 (2024-07-09)
+
 - Updated dependencies
 
 ## 18.1.0 (2023-06-12)

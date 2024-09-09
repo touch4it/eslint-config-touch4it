@@ -1,8 +1,8 @@
-const {ESLint} = require('eslint');
+import {ESLint} from 'eslint';
 
 function configureEslint(config) {
   return new ESLint({
-    useEslintrc: false,
+    // useEslintrc: false,
     overrideConfig: config,
   });
 }
@@ -20,7 +20,7 @@ function matchSeverity(matchedErrors, severity) {
   return matchedErrors.every(error => error.severity == severity);
 }
 
-module.exports = {
+export {
   configureEslint,
   runEslint,
   matchRule,

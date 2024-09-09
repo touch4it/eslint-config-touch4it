@@ -1,27 +1,20 @@
-const assert = require('node:assert');
-const fs = require('node:fs');
+import assert from 'node:assert';
+import fs from 'node:fs';
 
-const {
+import {
   configureEslint,
   runEslint,
   matchRule,
   matchSeverity,
-} = require('./utils/eslint.js');
+} from './utils/eslint.js';
 
-const mergeConfigs = require('./utils/merge-configs.js');
+import config from '../node.js';
 
 describe('Node rules', async function() {
-  let config;
   let eslint;
   let testFile;
 
-  before(function() {
-    const indexConfig = require('../index.js');
-    const nodeConfig = require('../node.js');
-
-    config = mergeConfigs({}, indexConfig, nodeConfig);
-    config.extends.splice(config.extends.indexOf('touch4it'), 1);
-
+  before(async function() {
     eslint = configureEslint(config);
 
     testFile = fs.readFileSync('./test/test-file', {encoding: 'utf-8'});
@@ -33,8 +26,6 @@ describe('Node rules', async function() {
 
     assert.ok(typeof config === 'object');
     assert.ok(config.rules !== null);
-
-    assert.ok(!config.extends.includes('touch4it'));
   });
 
   describe('Inherited rules', async function() {

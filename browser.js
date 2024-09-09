@@ -1,11 +1,19 @@
-module.exports = {
-  extends: [
-    'touch4it/commonjs',
-  ],
-  env: {
-    es6: true,
-    es2019: false,
-    node: false,
-    browser: true,
+import globals from 'node:globals';
+
+import xoBrowser from 'eslint-config-xo/browser';
+
+import defaults from './index.js';
+
+// TODO check and add tests
+export default [
+  ...defaults,
+  ...xoBrowser,
+  {
+    languageOptions: {
+      globals: {
+        ...Object.fromEntries(Object.entries(globals.node).map(([key]) => [key, 'off'])),
+        ...globals.browser,
+      },
+    },
   },
-};
+];

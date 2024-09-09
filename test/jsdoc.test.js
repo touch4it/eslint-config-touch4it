@@ -1,20 +1,20 @@
-const assert = require('node:assert');
-const fs = require('node:fs');
+import assert from 'node:assert';
+import fs from 'node:fs';
 
-const {
+import {
   configureEslint,
   runEslint,
   matchRule,
   matchSeverity,
-} = require('./utils/eslint.js');
+} from './utils/eslint.js';
+
+import config from '../jsdoc.js';
 
 describe('JSDoc rules', async function() {
-  let config;
   let eslint;
   let testFile;
 
-  before(function() {
-    config = require('../jsdoc.js');
+  before(async function() {
     eslint = configureEslint(config);
 
     testFile = fs.readFileSync('./test/test-file', {encoding: 'utf-8'});

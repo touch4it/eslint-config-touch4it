@@ -1,12 +1,10 @@
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import globals from 'node:globals';
 
+import globals from 'globals';
 import js from '@eslint/js';
-import {FlatCompat} from '@eslint/eslintrc';
-import mocha from 'eslint-plugin-mocha';
 
-import defaults from './index.js';
+import {FlatCompat} from '@eslint/eslintrc';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,17 +16,23 @@ const compat = new FlatCompat({
 });
 
 export default [
-  ...defaults,
-  ...compat.extends('plugin:mocha/recommended'),
+  ...compat.extends('eslint:recommended'),
   {
-    plugins: {
-      mocha,
-    },
-
     languageOptions: {
       globals: {
+        ...globals.node,
         ...globals.mocha,
       },
+
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+    },
+
+    rules: {
+      'array-element-newline': ['error', 'consistent'],
+      'comma-dangle': ['error', 'always-multiline'],
+      indent: ['error', 2],
+      quotes: ['error', 'single'],
     },
   },
 ];

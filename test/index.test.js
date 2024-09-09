@@ -1,20 +1,20 @@
-const assert = require('node:assert');
-const fs = require('node:fs');
+import assert from 'node:assert';
+import fs from 'node:fs';
 
-const {
+import {
   configureEslint,
   runEslint,
   matchRule,
   matchSeverity,
-} = require('./utils/eslint.js');
+} from './utils/eslint.js';
+
+import config from '../index.js';
 
 describe('Main rules', async function() {
-  let config;
   let eslint;
   let testFile;
 
-  before(function() {
-    config = require('../index.js');
+  before(async function() {
     eslint = configureEslint(config);
 
     testFile = fs.readFileSync('./test/test-file', {encoding: 'utf-8'});
@@ -38,7 +38,7 @@ describe('Main rules', async function() {
 
     it('Tests rule "indent"', async function() {
       const errors = await runEslint(testFile, eslint);
-      const matchedErrors = matchRule(errors, 'indent');
+      const matchedErrors = matchRule(errors, '@stylistic/indent');
       assert.ok(matchedErrors.length > 0);
       assert.ok(matchSeverity(matchedErrors, 2));
     });
@@ -63,28 +63,28 @@ describe('Main rules', async function() {
   describe('XO / Ava rules', async function() {
     it('Tests rule "comma-dangle"', async function() {
       const errors = await runEslint(testFile, eslint);
-      const matchedErrors = matchRule(errors, 'comma-dangle');
+      const matchedErrors = matchRule(errors, '@stylistic/comma-dangle');
       assert.ok(matchedErrors.length > 0);
       assert.ok(matchSeverity(matchedErrors, 2));
     });
 
     it('Tests rule "quotes"', async function() {
       const errors = await runEslint(testFile, eslint);
-      const matchedErrors = matchRule(errors, 'quotes');
+      const matchedErrors = matchRule(errors, '@stylistic/quotes');
       assert.ok(matchedErrors.length > 0);
       assert.ok(matchSeverity(matchedErrors, 2));
     });
 
     it('Tests rule "semi"', async function() {
       const errors = await runEslint(testFile, eslint);
-      const matchedErrors = matchRule(errors, 'semi');
+      const matchedErrors = matchRule(errors, '@stylistic/semi');
       assert.ok(matchedErrors.length > 0);
       assert.ok(matchSeverity(matchedErrors, 2));
     });
 
     it('Tests rule "space-before-function-paren"', async function() {
       const errors = await runEslint(testFile, eslint);
-      const matchedErrors = matchRule(errors, 'space-before-function-paren');
+      const matchedErrors = matchRule(errors, '@stylistic/space-before-function-paren');
       assert.ok(matchedErrors.length > 0);
       assert.ok(matchSeverity(matchedErrors, 2));
     });

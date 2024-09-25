@@ -26,7 +26,6 @@ const compat = new FlatCompat({
 });
 
 export default [
-  // js.configs.recommended,
   ...fixupConfigRules(compat.extends(
     'plugin:ava/recommended',
     'plugin:unicorn/recommended',
@@ -72,7 +71,6 @@ export default [
       'eslint-comments/no-unused-disable': 'error',
       'eslint-comments/no-unused-enable': 'error',
 
-      // TODO update "eslint-plugin-import" after it is released with ESLint 9 support
       'import/default': 'error',
       'import/export': 'error',
 

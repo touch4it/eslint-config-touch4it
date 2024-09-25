@@ -1,6 +1,6 @@
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import globals from 'node:globals';
+import globals from 'globals';
 
 import js from '@eslint/js';
 import {FlatCompat} from '@eslint/eslintrc';

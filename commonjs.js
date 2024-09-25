@@ -1,4 +1,4 @@
-import globals from 'node:globals';
+import globals from 'globals';
 
 import defaults from './index.js';
 

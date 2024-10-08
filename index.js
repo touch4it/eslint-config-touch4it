@@ -1,49 +1,43 @@
-import {fileURLToPath} from 'node:url';
-import path from 'node:path';
+import globals from 'globals';
 
-import {
-  fixupConfigRules,
-  fixupPluginRules,
-} from '@eslint/compat';
-
-import js from '@eslint/js';
-import {FlatCompat} from '@eslint/eslintrc';
-
-import ava from 'eslint-plugin-ava';
+import {fixupPluginRules} from '@eslint/compat';
 import eslintComments from 'eslint-plugin-eslint-comments';
-import _import from 'eslint-plugin-import';
-import promise from 'eslint-plugin-promise';
-import unicorn from 'eslint-plugin-unicorn';
-import xo from 'eslint-config-xo';
+import xoConfig from 'eslint-config-xo';
+import avaPlugin from 'eslint-plugin-ava';
+import importPlugin from 'eslint-plugin-import';
+import promisePlugin from 'eslint-plugin-promise';
+import stylisticPlugin from '@stylistic/eslint-plugin';
+import unicornPlugin from 'eslint-plugin-unicorn';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
-
-export default [
-  ...fixupConfigRules(compat.extends(
-    'plugin:ava/recommended',
-    'plugin:unicorn/recommended',
-  )),
-  xo[0],
+const config = [
   {
+    languageOptions: {
+      globals: {
+        ...globals.es2021,
+        ...globals.nodeBuiltin,
+      },
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
     plugins: {
-      ava: fixupPluginRules(ava),
+      ava: fixupPluginRules(avaPlugin),
       'eslint-comments': eslintComments,
-      import: fixupPluginRules(_import),
-      promise,
-      unicorn: fixupPluginRules(unicorn),
+      import: fixupPluginRules(importPlugin),
+      promise: promisePlugin,
+      unicorn: fixupPluginRules(unicornPlugin),
+      '@stylistic': fixupPluginRules(stylisticPlugin),
     },
 
     rules: {
+      ...xoConfig[0].rules,
       camelcase: 'error',
 
-      indent: ['error', 2, {
+      '@stylistic/indent': ['error', 2, {
         SwitchCase: 1,
       }],
 
@@ -295,6 +289,9 @@ export default [
       'promise/no-return-in-finally': 'error',
       'promise/valid-params': 'error',
       'promise/prefer-await-to-then': 'error',
+      'unicorn/prefer-module': 'error',
     },
   },
 ];
+
+export default config;

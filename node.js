@@ -1,40 +1,32 @@
-import path from 'node:path';
-import {fileURLToPath} from 'node:url';
-
 import node from 'eslint-plugin-n';
 import globals from 'globals';
-import js from '@eslint/js';
 
-import {FlatCompat} from '@eslint/eslintrc';
+import defaultConfig from './index.js';
 
-import defaults from './index.js';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
-
-export default [
-  ...defaults,
-  ...compat.extends('plugin:n/recommended'),
+const config = [
+  node.configs['flat/recommended-script'],
+  ...defaultConfig,
   {
     plugins: {
-      ...defaults.plugins,
       node,
     },
 
     languageOptions: {
       globals: {
+        ...globals.es2021,
+        ...globals.nodeBuiltin,
         ...globals.node,
       },
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
     },
-
     rules: {
-      ...defaults.rules,
+      ...defaultConfig.rules,
       'n/file-extension-in-import': ['error', 'always'],
       'n/no-extraneous-import': 'error',
       'n/no-extraneous-require': 'error',
@@ -65,3 +57,5 @@ export default [
     },
   },
 ];
+
+export default config;

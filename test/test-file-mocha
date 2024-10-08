@@ -1,0 +1,7 @@
+describe('Test scenario', async function() {
+  before(async function() {});
+
+  it('Test 1', function() {});
+
+  it('Test 2', () => {});
+});

@@ -33,7 +33,6 @@
     "es6",
     "es6+",
     "esm",
-    "commonjs",
     "touch4it",
     "unicorn",
     "ava",
@@ -46,8 +45,8 @@
     "test": "test"
   },
   "scripts": {
-    "eslint": "eslint --no-error-on-unmatched-pattern test/*.js *.js *.cjs",
-    "eslint:fix": "eslint --no-error-on-unmatched-pattern test/*.js *.js *.cjs --fix",
+    "eslint": "eslint --no-error-on-unmatched-pattern test/*.js *.js",
+    "eslint:fix": "eslint --no-error-on-unmatched-pattern test/*.js *.js --fix",
     "format-package": "npx format-package -w",
     "mocha": "mocha test/*.test.js --exit",
     "test": "npm run eslint && npm run mocha"
@@ -56,25 +55,26 @@
     "Viktor Sulak <sulak@touch4it.com>"
   ],
   "dependencies": {
-    "@eslint/compat": "^1.1.1",
+    "@eslint/compat": "^1.2.0",
     "@eslint/eslintrc": "^3.1.0",
-    "@eslint/js": "^9.10.0",
+    "@eslint/js": "^9.12.0",
+    "@stylistic/eslint-plugin": "^2.9.0",
     "eslint-config-xo": "^0.46.0",
     "eslint-plugin-ava": "^15.0.1",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.30.0",
-    "eslint-plugin-jsdoc": "^50.2.2",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsdoc": "^50.3.1",
     "eslint-plugin-mocha": "^10.5.0",
     "eslint-plugin-n": "^17.10.2",
     "eslint-plugin-promise": "^7.1.0",
-    "eslint-plugin-unicorn": "^55.0.0",
-    "globals": "^15.9.0"
+    "eslint-plugin-unicorn": "^56.0.0",
+    "globals": "^15.10.0"
   },
   "peerDependencies": {
     "eslint": "^9"
   },
   "devDependencies": {
-    "eslint": "^9.10.0",
+    "eslint": "^9.12.0",
     "mocha": "^10.7.3"
   }
 }

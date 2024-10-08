@@ -2,18 +2,23 @@ import globals from 'globals';
 
 import xoBrowser from 'eslint-config-xo/browser';
 
-import defaults from './index.js';
+import defaultConfig from './index.js';
 
-// TODO check and add tests
-export default [
-  ...defaults,
-  ...xoBrowser,
+const config = [
   {
+    ...defaultConfig,
     languageOptions: {
+      ...defaultConfig.languageOptions,
       globals: {
-        ...Object.fromEntries(Object.entries(globals.node).map(([key]) => [key, 'off'])),
+        ...globals.es2021,
         ...globals.browser,
       },
     },
+    rules: {
+      ...defaultConfig.rules,
+      ...xoBrowser,
+    },
   },
 ];
+
+export default config;

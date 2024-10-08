@@ -1,34 +1,32 @@
-import path from 'node:path';
-import {fileURLToPath} from 'node:url';
 import globals from 'globals';
-
-import js from '@eslint/js';
-import {FlatCompat} from '@eslint/eslintrc';
 import mocha from 'eslint-plugin-mocha';
 
-import defaults from './index.js';
+import defaultConfig from './index.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// TODO check and add tests
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
-
-export default [
-  ...defaults,
-  ...compat.extends('plugin:mocha/recommended'),
+const config = [
+  ...defaultConfig,
   {
     plugins: {
       mocha,
     },
 
     languageOptions: {
+      ...defaultConfig[0].languageOptions,
       globals: {
+        ...defaultConfig[0].languageOptions.globals,
         ...globals.mocha,
       },
     },
+
+    rules: {
+      ...mocha.configs.flat.recommended.rules,
+      'prefer-arrow-callback': 'off',
+      'mocha/no-mocha-arrows': 'off',
+      'mocha/no-async-describe': 'off',
+    },
   },
 ];
+
+export default config;

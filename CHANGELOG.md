@@ -7,6 +7,7 @@
 - Updated dependencies
 - Compatibility towards `xo@0.59.3`
 - Rewritten to ESM
+- Dropped support for CJS and therefore removed `commonjs` and `sails` configs
 
 ## 18.2.0 (2024-07-09)
 

@@ -1,6 +1,11 @@
 # CHANGELOG
 
+## 18.2.1 (2025-09-05)
+
+- Updated dependencies
+
 ## 18.2.0 (2023-07-09)
+
 - Updated dependencies
 
 ## 18.1.0 (2023-06-12)

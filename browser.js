@@ -1,24 +1,23 @@
 import globals from 'globals';
 
-import xoBrowser from 'eslint-config-xo/browser';
+import confusingBrowserGlobals from 'confusing-browser-globals';
+import xoConfig from 'eslint-config-xo';
 
-import defaultConfig from './index.js';
-
-const config = [
+export const browserConfig = [
   {
-    ...defaultConfig,
     languageOptions: {
-      ...defaultConfig.languageOptions,
+      ...xoConfig[0].languageOptions,
       globals: {
         ...globals.es2021,
         ...globals.browser,
       },
     },
     rules: {
-      ...defaultConfig.rules,
-      ...xoBrowser,
+      ...xoConfig[0].rules,
+      'no-restricted-globals': [
+        'error',
+        ...confusingBrowserGlobals,
+      ],
     },
   },
 ];
-
-export default config;

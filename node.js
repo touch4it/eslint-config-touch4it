@@ -1,16 +1,12 @@
 import node from 'eslint-plugin-n';
 import globals from 'globals';
 
-import defaultConfig from './index.js';
-
-const config = [
-  node.configs['flat/recommended-script'],
-  ...defaultConfig,
+export const nodeConfig = [
   {
+    ...node.configs['flat/recommended-script'],
     plugins: {
-      node,
+      n: node,
     },
-
     languageOptions: {
       globals: {
         ...globals.es2021,
@@ -26,7 +22,6 @@ const config = [
       },
     },
     rules: {
-      ...defaultConfig.rules,
       'n/file-extension-in-import': ['error', 'always'],
       'n/no-extraneous-import': 'error',
       'n/no-extraneous-require': 'error',
@@ -45,17 +40,13 @@ const config = [
       'n/prefer-global/url': ['error', 'always'],
       'n/prefer-promises/dns': 'error',
       'n/prefer-promises/fs': 'error',
-
       'n/no-mixed-requires': ['error', {
         grouping: true,
         allowCall: true,
       }],
-
       'n/no-new-require': 'error',
       'n/no-path-concat': 'error',
       'n/no-unsupported-features/es-syntax': 'off',
     },
   },
 ];
-
-export default config;

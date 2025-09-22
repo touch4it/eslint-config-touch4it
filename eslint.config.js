@@ -1,12 +1,13 @@
-import mochaConfig from './mocha.js';
+import { nodeConfig } from './node.js';
+import { mochaConfig } from './mocha.js';
+import { jsdocConfig } from './jsdoc.js';
+import { browserConfig } from './browser.js';
 import defaultConfig from './index.js';
 
-const config = [
+export default [
   ...defaultConfig,
-  {
-    ...mochaConfig[1],
-    files: ['test/*.js', 'test/**/*.js'],
-  },
+  ...nodeConfig,
+  ...mochaConfig,
+  ...jsdocConfig,
+  ...browserConfig,
 ];
-
-export default config;

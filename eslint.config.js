@@ -3,8 +3,8 @@ import defaultConfig from './index.js';
 
 const config = [
   ...defaultConfig,
+  ...mochaConfig,
   {
-    ...mochaConfig[1],
     files: ['test/*.js', 'test/**/*.js'],
   },
 ];

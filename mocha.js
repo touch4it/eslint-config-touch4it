@@ -1,21 +1,17 @@
 import globals from 'globals';
 import mocha from 'eslint-plugin-mocha';
 
-import defaultConfig from './index.js';
-
+// eslint-disable-next-line no-warning-comments
 // TODO check and add tests
 
 const config = [
-  ...defaultConfig,
   {
     plugins: {
       mocha,
     },
 
     languageOptions: {
-      ...defaultConfig[0].languageOptions,
       globals: {
-        ...defaultConfig[0].languageOptions.globals,
         ...globals.mocha,
       },
     },

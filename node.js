@@ -4,29 +4,24 @@ import globals from 'globals';
 import defaultConfig from './index.js';
 
 const config = [
-  node.configs['flat/recommended-script'],
   ...defaultConfig,
+  node.configs['flat/recommended-script'],
   {
     plugins: {
+      ...defaultConfig[0].plugins,
       node,
     },
 
     languageOptions: {
+      ...defaultConfig[0].languageOptions,
       globals: {
-        ...globals.es2021,
+        ...defaultConfig[0].languageOptions.globals,
         ...globals.nodeBuiltin,
         ...globals.node,
       },
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
     },
     rules: {
-      ...defaultConfig.rules,
+      ...defaultConfig[0].rules,
       'n/file-extension-in-import': ['error', 'always'],
       'n/no-extraneous-import': 'error',
       'n/no-extraneous-require': 'error',

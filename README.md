@@ -68,14 +68,6 @@ Or to `.eslintrc`:
 }
 ```
 
-[`touch4it/sails`](sails.js) for [Sails.js](https://sailsjs.com/) projects:
-
-```json
-{
-  "extends": "touch4it/sails"
-}
-```
-
 Default Node configuration is written for ESM, however you can still use [`touch4it/commonjs`](commonjs.js) for CommonJS projects:
 
 ```json

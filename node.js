@@ -1,7 +1,7 @@
 import node from 'eslint-plugin-n';
 import globals from 'globals';
 
-export const nodeConfig = [
+const nodeConfig = [
   {
     ...node.configs['flat/recommended-script'],
     plugins: {
@@ -50,3 +50,5 @@ export const nodeConfig = [
     },
   },
 ];
+
+export default nodeConfig;

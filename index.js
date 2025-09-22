@@ -1,6 +1,6 @@
 import globals from 'globals';
 
-import { fixupPluginRules } from '@eslint/compat';
+import {fixupPluginRules} from '@eslint/compat';
 import eslintComments from 'eslint-plugin-eslint-comments';
 import xoConfig from 'eslint-config-xo';
 import avaPlugin from 'eslint-plugin-ava';
@@ -210,11 +210,7 @@ const config = [
         sortCharacterClasses: false,
       }],
       'unicorn/no-empty-file': 'off',
-      'unicorn/string-content': ['error', {
-        patterns: {
-          '\.\.\.': '…',
-        },
-      }],
+      'unicorn/string-content': 'off',
       'unicorn/no-null': 'off',
       'unicorn/no-useless-undefined': 'off',
       'unicorn/prefer-string-raw': 'off',
@@ -232,7 +228,7 @@ const config = [
       'promise/prefer-await-to-then': 'error',
       'unicorn/prefer-module': 'error',
     },
-  }
+  },
 ];
 
 export default config;

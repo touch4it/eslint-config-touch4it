@@ -1,6 +1,6 @@
 import jsdoc from 'eslint-plugin-jsdoc';
 
-export const jsdocConfig = [
+const jsdocConfig = [
   {
     ...jsdoc.configs['flat/recommended'],
     rules: {
@@ -11,3 +11,5 @@ export const jsdocConfig = [
     },
   },
 ];
+
+export default jsdocConfig;

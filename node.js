@@ -1,14 +1,17 @@
 import node from 'eslint-plugin-n';
 import globals from 'globals';
 
+const baseConfig = node.configs['flat/recommended-script'];
+
 const nodeConfig = [
   {
-    ...node.configs['flat/recommended-script'],
     plugins: {
       n: node,
     },
     languageOptions: {
+      ...baseConfig.languageOptions,
       globals: {
+        ...baseConfig.languageOptions.globals,
         ...globals.es2021,
         ...globals.nodeBuiltin,
         ...globals.node,
@@ -22,6 +25,7 @@ const nodeConfig = [
       },
     },
     rules: {
+      ...baseConfig.rules,
       'n/file-extension-in-import': ['error', 'always'],
       'n/no-extraneous-import': 'error',
       'n/no-extraneous-require': 'error',

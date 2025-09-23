@@ -14,7 +14,7 @@ const mochaConfig = [
       },
     },
     rules: {
-      ...mocha.configs.flat.recommended.rules,
+      ...mocha.configs.recommended.rules,
       'prefer-arrow-callback': 'off',
       'mocha/no-mocha-arrows': 'off',
       'mocha/no-async-describe': 'off',

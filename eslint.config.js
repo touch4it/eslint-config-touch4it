@@ -6,25 +6,21 @@ import defaultConfig from './index.js';
 
 const config = [
   ...defaultConfig,
-
   ...nodeConfig.map(cfg => ({
-    ...cfg,
     files: ['**/*.node.js', 'scripts/**/*.js'],
+    ...cfg,
   })),
-
   ...mochaConfig.map(cfg => ({
-    ...cfg,
     files: ['test/**/*.js'],
+    ...cfg,
   })),
-
   ...jsdocConfig.map(cfg => ({
-    ...cfg,
     files: ['**/*.js'],
-  })),
-
-  ...browserConfig.map(cfg => ({
     ...cfg,
+  })),
+  ...browserConfig.map(cfg => ({
     files: ['src/browser/**/*.js'],
+    ...cfg,
   })),
 ];
 

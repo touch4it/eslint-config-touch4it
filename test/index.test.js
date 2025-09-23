@@ -9,7 +9,7 @@ import {
   matchSeverity,
 } from './utils/eslint.js';
 
-describe('Main rules', async function () {
+describe('Main rules', function () {
   let eslint;
   let testFile;
 
@@ -27,7 +27,7 @@ describe('Main rules', async function () {
     assert.ok(config.rules !== null);
   });
 
-  describe('Defined rules', async function () {
+  describe('Defined rules', function () {
     it('Tests rule "camelcase"', async function () {
       const errors = await runEslint(testFile, eslint);
       const matchedErrors = matchRule(errors, 'camelcase');
@@ -43,7 +43,7 @@ describe('Main rules', async function () {
     });
   });
 
-  describe('Unicorn rules', async function () {
+  describe('Unicorn rules', function () {
     it('Tests rule "unicorn/prevent-abbreviations"', async function () {
       const errors = await runEslint(testFile, eslint);
       const matchedErrors = matchRule(errors, 'unicorn/prevent-abbreviations');
@@ -59,7 +59,7 @@ describe('Main rules', async function () {
     });
   });
 
-  describe('XO / Ava rules', async function () {
+  describe('XO / Ava rules', function () {
     it('Tests rule "comma-dangle"', async function () {
       const errors = await runEslint(testFile, eslint);
       const matchedErrors = matchRule(errors, '@stylistic/comma-dangle');

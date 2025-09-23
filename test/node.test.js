@@ -1,7 +1,9 @@
 import assert from 'node:assert';
 import fs from 'node:fs';
 
-import config from '../node.js';
+import defaultConfig from '../index.js';
+import nodeConfig from '../node.js';
+
 import {
   configureEslint,
   runEslint,
@@ -9,11 +11,13 @@ import {
   matchSeverity,
 } from './utils/eslint.js';
 
-describe('Node rules', async () => {
+describe('Node rules', () => {
   let eslint;
   let testFile;
+  let config;
 
   before(async function () {
+    config = [...defaultConfig, ...nodeConfig];
     eslint = configureEslint(config);
 
     testFile = fs.readFileSync('./test/test-file', {encoding: 'utf-8'});
@@ -27,7 +31,7 @@ describe('Node rules', async () => {
     assert.ok(config.rules !== null);
   });
 
-  describe('Inherited rules', async function () {
+  describe('Inherited rules', function () {
     it('Tests rule "@stylistic/quotes"', async function () {
       const errors = await runEslint(testFile, eslint);
       const matchedErrors = matchRule(errors, '@stylistic/quotes');

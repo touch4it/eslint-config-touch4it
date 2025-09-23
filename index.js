@@ -105,6 +105,7 @@ const config = [
       'unicorn/consistent-function-scoping': 'off',
       'unicorn/expiring-todo-comments': ['error', {
         allowWarningComments: true,
+        terms: ['TODO'],
       }],
       'unicorn/explicit-length-check': 'off',
       'unicorn/filename-case': 'off',

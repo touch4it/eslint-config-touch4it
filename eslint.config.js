@@ -1,8 +1,8 @@
-import browserConfig from './browser.js';
-import jsdocConfig from './jsdoc.js';
-import mochaConfig from './mocha.js';
-import nodeConfig from './node.js';
-import defaultConfig from './index.js';
+import {browserConfig} from './browser.js';
+import {jsdocConfig} from './jsdoc.js';
+import {mochaConfig} from './mocha.js';
+import {nodeConfig} from './node.js';
+import {defaultConfig} from './index.js';
 
 const config = [
   ...defaultConfig,

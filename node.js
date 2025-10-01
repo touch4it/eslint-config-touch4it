@@ -3,7 +3,7 @@ import globals from 'globals';
 
 const baseConfig = node.configs['flat/recommended-script'];
 
-const nodeConfig = [
+export const nodeConfig = [
   {
     plugins: {
       n: node,

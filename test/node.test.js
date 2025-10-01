@@ -1,8 +1,8 @@
 import assert from 'node:assert';
 import fs from 'node:fs';
 
-import defaultConfig from '../index.js';
-import nodeConfig from '../node.js';
+import {defaultConfig} from '../index.js';
+import {nodeConfig} from '../node.js';
 
 import {
   configureEslint,

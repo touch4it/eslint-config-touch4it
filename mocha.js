@@ -3,7 +3,7 @@ import mocha from 'eslint-plugin-mocha';
 
 // TODO check and add tests
 
-const mochaConfig = [
+export const mochaConfig = [
   {
     plugins: {
       mocha,

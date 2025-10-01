@@ -9,7 +9,7 @@ import promisePlugin from 'eslint-plugin-promise';
 import unicornPlugin from 'eslint-plugin-unicorn';
 import stylisticPlugin from '@stylistic/eslint-plugin';
 
-const config = [
+export const defaultConfig = [
   {
     languageOptions: {
       globals: {
@@ -232,4 +232,9 @@ const config = [
   },
 ];
 
-export default config;
+export {browserConfig} from './browser.js';
+export {jsdocConfig} from './jsdoc.js';
+export {mochaConfig} from './mocha.js';
+export {nodeConfig} from './node.js';
+
+export default defaultConfig;

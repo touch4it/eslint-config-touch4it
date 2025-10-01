@@ -3,7 +3,7 @@ import globals from 'globals';
 import confusingBrowserGlobals from 'confusing-browser-globals';
 import xoConfig from 'eslint-config-xo';
 
-const browserConfig = [
+export const browserConfig = [
   {
     languageOptions: {
       ...xoConfig[0].languageOptions,

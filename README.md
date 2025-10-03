@@ -22,6 +22,16 @@ npm install --save-dev eslint-config-touch4it
 **2. Import and use the configs you need:**
 
 ```js
+import { defaultConfig } from 'eslint-config-touch4it';
+
+export default [
+  ...defaultConfig,
+];
+```
+
+## Extended Example
+
+```js
 import { defaultConfig, mochaConfig, nodeConfig, jsdocConfig, browserConfig } from 'eslint-config-touch4it';
 
 export default [
@@ -40,23 +50,6 @@ export default [
   })),
   ...browserConfig.map(cfg => ({
     files: ['src/browser/**/*.js'],
-    ...cfg,
-  })),
-];
-```
-
-## Example: Only Mocha and Node
-
-```js
-import { mochaConfig, nodeConfig } from 'eslint-config-touch4it';
-
-export default [
-  ...nodeConfig.map(cfg => ({
-    files: ['**/*.js'],
-    ...cfg,
-  })),
-  ...mochaConfig.map(cfg => ({
-    files: ['test/**/*.js'],
     ...cfg,
   })),
 ];

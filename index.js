@@ -1,6 +1,4 @@
 import globals from 'globals';
-
-import {fixupPluginRules} from '@eslint/compat';
 import eslintComments from 'eslint-plugin-eslint-comments';
 import xoConfig from 'eslint-config-xo';
 import avaPlugin from 'eslint-plugin-ava';
@@ -25,18 +23,21 @@ export const defaultConfig = [
       },
     },
     plugins: {
-      ava: fixupPluginRules(avaPlugin),
+      ava: avaPlugin,
       'eslint-comments': eslintComments,
-      import: fixupPluginRules(importPlugin),
+      import: importPlugin,
       promise: promisePlugin,
-      unicorn: fixupPluginRules(unicornPlugin),
-      '@stylistic': fixupPluginRules(stylisticPlugin),
+      unicorn: unicornPlugin,
+      '@stylistic': stylisticPlugin,
     },
     rules: {
       ...xoConfig[0].rules,
       camelcase: 'error',
       '@stylistic/indent': ['error', 2, {
         SwitchCase: 1,
+      }],
+      'no-multi-spaces': ['error', {
+        ignoreEOLComments: true,
       }],
       'no-inline-comments': 'warn',
       'prefer-template': 'warn',

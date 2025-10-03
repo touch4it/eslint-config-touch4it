@@ -1,6 +1,5 @@
 import globals from 'globals';
 
-import confusingBrowserGlobals from 'confusing-browser-globals';
 import xoConfig from 'eslint-config-xo';
 
 export const browserConfig = [
@@ -14,10 +13,6 @@ export const browserConfig = [
     },
     rules: {
       ...xoConfig[0].rules,
-      'no-restricted-globals': [
-        'error',
-        ...confusingBrowserGlobals,
-      ],
     },
   },
 ];

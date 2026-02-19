@@ -51,6 +51,10 @@ export const nodeConfig = [
       'n/no-new-require': 'error',
       'n/no-path-concat': 'error',
       'n/no-unsupported-features/es-syntax': 'off',
+      '@stylistic/curly-newline': ['error', {
+        multiline: true,
+        minElements: 1,
+      }],
     },
   },
 ];

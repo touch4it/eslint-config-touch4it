@@ -32,27 +32,37 @@ export default [
 ## Extended Example
 
 ```js
-import { defaultConfig, mochaConfig, nodeConfig, jsdocConfig, browserConfig } from 'eslint-config-touch4it';
+import {
+  defaultConfig,
+  mochaConfig,
+  jsdocConfig,
+  nodeConfig,
+} from 'eslint-config-touch4it';
 
-export default [
+const config = [
   ...defaultConfig,
-  ...nodeConfig.map(cfg => ({
-    files: ['**/*.node.js', 'scripts/**/*.js'],
-    ...cfg,
-  })),
+  ...nodeConfig,
   ...mochaConfig.map(cfg => ({
     files: ['test/**/*.js'],
     ...cfg,
   })),
-  ...jsdocConfig.map(cfg => ({
+  ...jsdocConfig,
+  {
     files: ['**/*.js'],
-    ...cfg,
-  })),
-  ...browserConfig.map(cfg => ({
-    files: ['src/browser/**/*.js'],
-    ...cfg,
-  })),
+    rules: {
+      'mocha/no-mocha-arrows': 'off'
+    },
+    ignores: [
+      "node_modules/",
+      ".eslintcache",
+      ".env",
+      ".npm",
+      "package-lock.json",
+    ]
+  },
 ];
+
+export default config;
 ```
 
 ## License

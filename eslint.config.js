@@ -1,12 +1,27 @@
-import mochaConfig from './mocha.js';
-import defaultConfig from './index.js';
+import {browserConfig} from './browser.js';
+import {jsdocConfig} from './jsdoc.js';
+import {mochaConfig} from './mocha.js';
+import {nodeConfig} from './node.js';
+import {defaultConfig} from './index.js';
 
 const config = [
   ...defaultConfig,
-  {
-    ...mochaConfig[1],
-    files: ['test/*.js', 'test/**/*.js'],
-  },
+  ...nodeConfig.map(cfg => ({
+    files: ['**/*.node.js', 'scripts/**/*.js'],
+    ...cfg,
+  })),
+  ...mochaConfig.map(cfg => ({
+    files: ['test/**/*.js'],
+    ...cfg,
+  })),
+  ...jsdocConfig.map(cfg => ({
+    files: ['**/*.js'],
+    ...cfg,
+  })),
+  ...browserConfig.map(cfg => ({
+    files: ['src/browser/**/*.js'],
+    ...cfg,
+  })),
 ];
 
 export default config;

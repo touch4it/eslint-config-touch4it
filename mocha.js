@@ -1,27 +1,20 @@
 import globals from 'globals';
 import mocha from 'eslint-plugin-mocha';
 
-import defaultConfig from './index.js';
-
 // TODO check and add tests
 
-const config = [
-  ...defaultConfig,
+export const mochaConfig = [
   {
     plugins: {
       mocha,
     },
-
     languageOptions: {
-      ...defaultConfig[0].languageOptions,
       globals: {
-        ...defaultConfig[0].languageOptions.globals,
         ...globals.mocha,
       },
     },
-
     rules: {
-      ...mocha.configs.flat.recommended.rules,
+      ...mocha.configs.recommended.rules,
       'prefer-arrow-callback': 'off',
       'mocha/no-mocha-arrows': 'off',
       'mocha/no-async-describe': 'off',
@@ -29,4 +22,4 @@ const config = [
   },
 ];
 
-export default config;
+export default mochaConfig;

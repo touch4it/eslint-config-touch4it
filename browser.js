@@ -1,24 +1,20 @@
 import globals from 'globals';
 
-import xoBrowser from 'eslint-config-xo/browser';
+import xoConfig from 'eslint-config-xo';
 
-import defaultConfig from './index.js';
-
-const config = [
+export const browserConfig = [
   {
-    ...defaultConfig,
     languageOptions: {
-      ...defaultConfig.languageOptions,
+      ...xoConfig[0].languageOptions,
       globals: {
         ...globals.es2021,
         ...globals.browser,
       },
     },
     rules: {
-      ...defaultConfig.rules,
-      ...xoBrowser,
+      ...xoConfig[0].rules,
     },
   },
 ];
 
-export default config;
+export default browserConfig;

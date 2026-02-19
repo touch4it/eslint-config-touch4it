@@ -9,7 +9,7 @@ import {
   matchSeverity,
 } from './utils/eslint.js';
 
-describe('JSDoc rules', async function () {
+describe('JSDoc rules', function () {
   let eslint;
   let testFile;
 
@@ -27,7 +27,7 @@ describe('JSDoc rules', async function () {
     assert.ok(config.rules !== null);
   });
 
-  describe('JSdoc rules', async function () {
+  describe('JSdoc rules', function () {
     it('Tests rule "jsdoc/require-jsdoc"', async function () {
       const errors = await runEslint(testFile, eslint);
       const matchedErrors = matchRule(errors, 'jsdoc/require-jsdoc');

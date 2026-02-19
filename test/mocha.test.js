@@ -9,7 +9,7 @@ import {
   matchSeverity,
 } from './utils/eslint.js';
 
-describe('Mocha rules', async function () {
+describe('Mocha rules', function () {
   let eslint;
   let testFile;
 
@@ -27,7 +27,7 @@ describe('Mocha rules', async function () {
     assert.ok(config.rules !== null);
   });
 
-  describe('Inherited rules', async function () {
+  describe('Inherited rules', function () {
     it('Tests rule "no-mocha-arrows"', async function () {
       const errors = await runEslint(testFile, eslint);
       const matchedErrors = matchRule(errors, 'no-mocha-arrows');

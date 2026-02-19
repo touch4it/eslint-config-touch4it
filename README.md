@@ -7,7 +7,7 @@
 ![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/eslint-config-touch4it)
 ![last commit](https://img.shields.io/github/last-commit/touch4it/eslint-config-touch4it)
 
-> ESLint [shareable config](https://eslint.org/docs/developer-guide/shareable-configs.html) based on for [XO](https://github.com/xojs/eslint-config-xo)
+> ESLint [flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new) for [XO](https://github.com/xojs/eslint-config-xo)-based projects
 
 ## Install
 
@@ -15,84 +15,54 @@
 npm install --save-dev eslint-config-touch4it
 ```
 
-## Usage
+## Usage (ESLint 9+ Flat Config)
 
-Built for ES2019+
+**1. Create a new `eslint.config.js` in your project root.**
 
-Add some ESLint config to your `package.json`:
+**2. Import and use the configs you need:**
 
-```json
-{
-  "name": "my-awesome-project",
-  "eslintConfig": {
-    "extends": "touch4it"
-  }
-}
+```js
+import { defaultConfig } from 'eslint-config-touch4it';
+
+export default [
+  ...defaultConfig,
+];
 ```
 
-Or to `.eslintrc`:
+## Extended Example
 
-```json
-{
-  "extends": "touch4it"
-}
-```
+```js
+import {
+  defaultConfig,
+  mochaConfig,
+  jsdocConfig,
+  nodeConfig,
+} from 'eslint-config-touch4it';
 
-[`touch4it/node`](node.js) for [Node.js](https://nodejs.org/) projects:
+const config = [
+  ...defaultConfig,
+  ...nodeConfig,
+  ...mochaConfig.map(cfg => ({
+    files: ['test/**/*.js'],
+    ...cfg,
+  })),
+  ...jsdocConfig,
+  {
+    files: ['**/*.js'],
+    rules: {
+      'mocha/no-mocha-arrows': 'off'
+    },
+    ignores: [
+      "node_modules/",
+      ".eslintcache",
+      ".env",
+      ".npm",
+      "package-lock.json",
+    ]
+  },
+];
 
-```json
-{
-  "extends": "touch4it/node"
-}
-```
-
-[`touch4it/mocha`](mocha.js) for [Mocha](https://mochajs.org/)-tested projects:
-
-```json
-{
-  "extends": [
-    "touch4it/node",
-    "touch4it/mocha"
-  ]
-}
-```
-
-[`touch4it/jsdoc`](jsdoc.js) for [JSDoc](https://www.npmjs.com/package/jsdoc)-documented projects:
-
-```json
-{
-  "extends": [
-    "touch4it/node",
-    "touch4it/jsdoc"
-  ]
-}
-```
-
-[`touch4it/sails`](sails.js) for [Sails.js](https://sailsjs.com/) projects:
-
-```json
-{
-  "extends": "touch4it/sails"
-}
-```
-
-Default Node configuration is written for ESM, however you can still use [`touch4it/commonjs`](commonjs.js) for CommonJS projects:
-
-```json
-{
-  "extends": [
-    "touch4it/node",
-    "touch4it/commonjs"
-  ]
-}
-```
-
-And [`touch4it/browser`](browser.js) for browser:
-
-```json
-{
-  "extends": "touch4it/browser"
-}
+export default config;
 ```
 
 ## License

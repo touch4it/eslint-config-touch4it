@@ -1,10 +1,10 @@
-import jsdoc from 'eslint-plugin-jsdoc';
+import jsdocPlugin from 'eslint-plugin-jsdoc';
 
 export const jsdocConfig = [
   {
-    ...jsdoc.configs['flat/recommended'],
+    ...jsdocPlugin.configs['flat/recommended'],
     rules: {
-      ...jsdoc.configs['flat/recommended'].rules,
+      ...jsdocPlugin.configs['flat/recommended'].rules,
       'jsdoc/check-tag-names': ['error', {
         definedTags: ['category'],
       }],

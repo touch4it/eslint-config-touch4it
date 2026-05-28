@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 20.0.0 (2026-05-28)
+
+- Peer dependency updated to ESLint `^10.3.0`
+- Minimal engine requirement changed to Node `>= 22`
+- Replaced `eslint-plugin-import` with `eslint-plugin-import-x` (`import/` rules → `import-x/`)
+- Replaced `eslint-plugin-eslint-comments` with `@eslint-community/eslint-plugin-eslint-comments`
+- Updated dependencies (`eslint-config-xo`, `@eslint/js`, `eslint-plugin-ava`, and others)
+- Adjusted loading of XO base rules and language options in preset configs
+- Extended `MIGRATION.MD` with ESLint 10 and `import-x` migration notes
+
 ## 19.0.0 (2024-09-09)
 
 - Migrated to flat config

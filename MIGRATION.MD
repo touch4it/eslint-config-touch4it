@@ -44,7 +44,7 @@ Peer dependency expects ESLint 10, for example `npm install eslint@^10.3.0 --sav
 
 ### Breaking: Node.js version
 
-ESLint 10 and this config expect a supported Node.js release (for example `>= 20.19` as in this package’s `engines`). Older Node versions are not supported.
+ESLint 10 and this config expect a supported Node.js release (for example `>= 22` as in this package’s `engines`). Older Node versions are not supported.
 
 ### Breaking: flat config only in ESLint 10
 

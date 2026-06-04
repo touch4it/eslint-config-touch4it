@@ -1,11 +1,19 @@
 language: node_js
 
-dist: focal
+dist: noble
 
 node_js:
+  - '25'
+  - '24'
   - '22'
-  - '20'
-  - '18'
 
-before_install:
-  - "npm install eslint@8"
+install:
+  - npm install
+
+jobs:
+  include:
+    - stage: test
+      script: npm run test
+    - stage: security
+      node_js: '22'
+      script: npm audit --audit-level=moderate

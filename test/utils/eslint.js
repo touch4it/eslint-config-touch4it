@@ -7,9 +7,14 @@ function configureEslint(config) {
   });
 }
 
-async function runEslint(string, eslint) {
-  const [errors] = await eslint.lintText(string);
+async function runEslint(string, eslint, options = {}) {
+  const [errors] = await eslint.lintText(string, options);
   return errors?.messages ?? [];
+}
+
+async function runEslintFile(filePath, eslint) {
+  const results = await eslint.lintFiles([filePath]);
+  return results[0]?.messages ?? [];
 }
 
 function matchRule(errors, ruleName) {
@@ -23,6 +28,7 @@ function matchSeverity(matchedErrors, severity) {
 export {
   configureEslint,
   runEslint,
+  runEslintFile,
   matchRule,
   matchSeverity,
 };

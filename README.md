@@ -37,11 +37,13 @@ import {
   mochaConfig,
   jsdocConfig,
   nodeConfig,
+  typescriptConfig,
 } from 'eslint-config-touch4it';
 
 const config = [
   ...defaultConfig,
   ...nodeConfig,
+  ...typescriptConfig,
   ...mochaConfig.map(cfg => ({
     files: ['test/**/*.js'],
     ...cfg,

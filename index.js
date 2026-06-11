@@ -15,7 +15,11 @@ const excludedXoOnlyRules = [
   'no-shadow',
   'preserve-caught-error',
 ];
-const xoRuleEntries = Object.entries(xoRules).filter(([ruleName]) => (!ruleName.includes('/') || ruleName.startsWith('@stylistic/')) && !excludedXoOnlyRules.includes(ruleName));
+const xoRuleEntries = Object.entries(xoRules).filter(([ruleName]) => (
+  (!ruleName.includes('/') || ruleName.startsWith('@stylistic/'))
+  && !ruleName.startsWith('@typescript-eslint/')
+  && !excludedXoOnlyRules.includes(ruleName)
+));
 const xoOnlyRules = Object.fromEntries(xoRuleEntries);
 
 export const defaultConfig = [
@@ -253,5 +257,6 @@ export {browserConfig} from './browser.js';
 export {jsdocConfig} from './jsdoc.js';
 export {mochaConfig} from './mocha.js';
 export {nodeConfig} from './node.js';
+export {typescriptConfig} from './typescript.js';
 
 export default defaultConfig;

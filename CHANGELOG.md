@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 21.0.0 (2026-06-09)
+- Separated typescript rules `typescript.js`
+
 ## 20.0.0 (2026-05-28)
 
 - Peer dependency updated to ESLint `^10.3.0`

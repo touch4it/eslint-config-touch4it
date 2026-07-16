@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 22.0.0
+- Peer dependency updated to ESLint `^10.7.0`
+- Updated dependencies (`eslint-config-xo` 0.57, `eslint-plugin-unicorn` 71, `eslint-plugin-n` 18, `eslint-plugin-ava` 17, `eslint-plugin-jsdoc` 63, and others)
+- Renamed `unicorn/prevent-abbreviations` → `unicorn/name-replacements`
+- Removed deprecated `unicorn/better-regex`; added `eslint-plugin-regexp` (XO regexp rules, `regexp/sort-character-class-elements` off)
+- Adjusted TypeScript preset filter to XO configs named `xo/typescript*`
+- Documented consumer impact of XO / Unicorn / Node rule changes in `MIGRATION.MD`
+
 ## 21.0.0 (2026-06-09)
 - Separated typescript rules `typescript.js`
 

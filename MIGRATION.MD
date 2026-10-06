@@ -15,13 +15,6 @@ Each section describes upgrading **to** that version of `eslint-config-touch4it`
 
 **From:** `eslint-config-touch4it@21`
 
-### Install
-
-```bash
-npm install eslint-config-touch4it@^22.0.0
-npm install eslint@^10.7.0 --save-dev
-```
-
 **Requirements:** Node `>= 22`, ESLint `^10.7.0` (was `^10.3.0` in v21).
 
 ### Update in your project
@@ -99,12 +92,6 @@ See also the [ESLint v10 migration guide](https://eslint.org/docs/latest/use/mig
 ## 19.0.0
 
 **From:** `eslint-config-touch4it@18` (or older with `.eslintrc`)
-
-### Breaking changes
-
-- Migrated to flat config — create `eslint.config.js`, remove `.eslintrc.*`
-- Rewritten to ESM (CJS and `commonjs` / `sails` configs removed)
-- Node `>= 18`
 
 ### Example `eslint.config.js`
 

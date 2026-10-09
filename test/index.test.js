@@ -44,9 +44,9 @@ describe('Main rules', function () {
   });
 
   describe('Unicorn rules', function () {
-    it('Tests rule "unicorn/prevent-abbreviations"', async function () {
+    it('Tests rule "unicorn/name-replacements"', async function () {
       const errors = await runEslint(testFile, eslint);
-      const matchedErrors = matchRule(errors, 'unicorn/prevent-abbreviations');
+      const matchedErrors = matchRule(errors, 'unicorn/name-replacements');
       assert.ok(matchedErrors.length > 0);
       assert.ok(matchSeverity(matchedErrors, 2));
     });

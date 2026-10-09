@@ -4,10 +4,13 @@ import eslintConfigXo from 'eslint-config-xo';
 import avaPlugin from 'eslint-plugin-ava';
 import importPlugin from 'eslint-plugin-import-x';
 import promisePlugin from 'eslint-plugin-promise';
+import regexpPlugin from 'eslint-plugin-regexp';
 import unicornPlugin from 'eslint-plugin-unicorn';
 import stylisticPlugin from '@stylistic/eslint-plugin';
 
-const xoRules = eslintConfigXo().find(config => config.name === 'xo/base').rules;
+const xoConfigs = eslintConfigXo();
+const xoRules = xoConfigs.find(config => config.name === 'xo/base').rules;
+const xoRegexpRules = xoConfigs.find(config => config.name === 'xo/regexp').rules;
 const excludedXoOnlyRules = [
   'no-nested-ternary',
   'function-call-argument-newline',
@@ -42,6 +45,7 @@ export const defaultConfig = [
       '@eslint-community/eslint-comments': eslintComments,
       'import-x': importPlugin,
       promise: promisePlugin,
+      regexp: regexpPlugin,
       unicorn: unicornPlugin,
       '@stylistic': stylisticPlugin,
     },
@@ -52,6 +56,8 @@ export const defaultConfig = [
     },
     rules: {
       ...xoOnlyRules,
+      ...xoRegexpRules,
+      'regexp/sort-character-class-elements': 'off',
       camelcase: 'error',
       '@stylistic/indent': ['error', 2, {
         SwitchCase: 1,
@@ -132,8 +138,8 @@ export const defaultConfig = [
       'unicorn/filename-case': 'off',
       'unicorn/no-process-exit': 'error',
       'no-process-exit': 'off',
-      'unicorn/prefer-flat-map': 'off',
-      'unicorn/prevent-abbreviations': ['error', {
+      'unicorn/prefer-array-flat-map': 'off',
+      'unicorn/name-replacements': ['error', {
         checkFilenames: false,
         checkDefaultAndNamespaceImports: false,
         checkShorthandImports: false,
@@ -227,9 +233,6 @@ export const defaultConfig = [
           param: true,
           params: true,
         },
-      }],
-      'unicorn/better-regex': ['error', {
-        sortCharacterClasses: false,
       }],
       'unicorn/no-empty-file': 'off',
       'unicorn/string-content': 'off',

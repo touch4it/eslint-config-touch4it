@@ -1,12 +1,14 @@
 # CHANGELOG
 
 ## 22.0.0
-- Peer dependency updated to ESLint `^10.7.0`
-- Updated dependencies (`eslint-config-xo` 0.57, `eslint-plugin-unicorn` 71, `eslint-plugin-n` 18, `eslint-plugin-ava` 17, `eslint-plugin-jsdoc` 63, and others)
+- Peer dependency updated to ESLint `^10.12.0`
+- Node engines tightened to `^22.22.2 || >=24.15.0` (`eslint-plugin-jsdoc` 65)
+- Updated dependencies (`eslint-config-xo` 5, `eslint-plugin-unicorn` 77, `eslint-plugin-n` 18, `eslint-plugin-ava` 17, `eslint-plugin-jsdoc` 65, `eslint-plugin-mocha` 12, `eslint-plugin-regexp` 3, and others)
 - Renamed `unicorn/prevent-abbreviations` → `unicorn/name-replacements`
 - Removed deprecated `unicorn/better-regex`; added `eslint-plugin-regexp` (XO regexp rules, `regexp/sort-character-class-elements` off)
 - Adjusted TypeScript preset filter to XO configs named `xo/typescript*`
-- Documented consumer impact of XO / Unicorn / Node rule changes in `MIGRATION.MD`
+- Mocha preset follows `eslint-plugin-mocha` 12 recommended rules; `mocha/no-async-describe` override updated to `mocha/no-async-suite`
+- Documented consumer impact of XO / Unicorn / Mocha / JSDoc rule changes in `MIGRATION.MD`
 
 ## 21.0.0 (2026-06-09)
 - Separated typescript rules `typescript.js`

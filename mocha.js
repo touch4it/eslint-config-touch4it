@@ -17,7 +17,7 @@ export const mochaConfig = [
       ...mocha.configs.recommended.rules,
       'prefer-arrow-callback': 'off',
       'mocha/no-mocha-arrows': 'off',
-      'mocha/no-async-describe': 'off',
+      'mocha/no-async-suite': 'off',
     },
   },
 ];
